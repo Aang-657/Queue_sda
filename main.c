@@ -19,6 +19,7 @@ int main(){
 
     while (isrunning){
         printmenu(); 
+        printf("masukkan input: ");
         scanf("%d", &x);
 
         if (x == 4){
@@ -29,8 +30,10 @@ int main(){
             printf("pilih teller (1 atau 2): ");
             scanf("%d", &teller);
             if (teller == 1){
+                printf("teller1: ");
                 tab[x-2](&teller1, nomorantrian);
             } else if (teller == 2) {
+                printf("teller2: ");
                 tab[x-2](&teller2, nomorantrian);
             } else {
                 printf("input tidak valid ...\n");
@@ -43,9 +46,11 @@ int main(){
 
             if (len1<=len2){
                 printf("antrian masuk ke teller 1: \n");
+                printf("teller1: ");
                 ambilantrian(&teller1, nomorantrian);
             } else{
                 printf("antrian masuk ke teller 2: \n");
+                printf("teller2: ");
                 ambilantrian(&teller2, nomorantrian);
             }
         }
